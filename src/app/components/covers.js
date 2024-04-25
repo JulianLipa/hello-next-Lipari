@@ -10,6 +10,7 @@ const Album = (props) => {
                 alt="cover image"
                 width={150}
                 height={150}
+                style={{borderRadius:"10px"}}
             />
             <h2 style={{width:"200px", marginBottom:"5px"}}>{title}</h2>
             <p style={{marginBottom:"5px"}}>{year}</p>
