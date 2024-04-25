@@ -7,7 +7,7 @@ const Album = (props) => {
         <div style={{backgroundColor:"white", color:"black", padding:"30px", borderRadius:"10px", margin:"10px"}}>
             <Image
                 src={img}
-                alt=""
+                alt="cover image"
                 width={150}
                 height={150}
             />
