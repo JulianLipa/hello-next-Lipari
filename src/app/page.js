@@ -26,9 +26,9 @@ export default function Home() {
 
       <h4 style={{marginTop:"10px"}}>*COVERS SECTION</h4>
       <div style={{display:"flex", justifyContent:"center"}}>
-        <Album title="Gulp!" img="/gulp-cover.jpeg" year="1985" long="39:20" />
-        <Album title="Oktubre" img="/oktubre-cover.webp" year="1986" long="41:08" />
-        <Album title="¡Bang! ¡Bang!... Estas liquidado" img="/bang-cover.jpeg" year="1989" long="32:49" />
+        <Album title="Gulp!" img="/images/gulp-cover.jpeg" year="1985" long="39:20" />
+        <Album title="Oktubre" img="/images/oktubre-cover.webp" year="1986" long="41:08" />
+        <Album title="¡Bang! ¡Bang!... Estas liquidado" img="/images/bang-cover.jpeg" year="1989" long="32:49" />
       </div>
     </main>
   );
