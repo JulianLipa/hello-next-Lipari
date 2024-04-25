@@ -4,7 +4,7 @@ const Album = (props) => {
     const {title, img, year, long} = props;
 
     return(
-        <div style={{backgroundColor:"white", color:"black", padding:"30px", borderRadius:"10px", margin:"10px"}}>
+        <div className="cards-single" style={{backgroundColor:"white", color:"black", padding:"30px", borderRadius:"10px", margin:"10px"}}>
             <Image
                 src={img}
                 alt="cover image"

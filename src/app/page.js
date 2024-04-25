@@ -7,16 +7,64 @@ export default function Home() {
   const albums = [
     {
       title: "Gulp!",
-      img: "",
+      img: "/images/gulp-cover.jpeg",
       year: "1985",
-      long: "39:20",
+      long: "39:20"
     },
     {
       title: "Oktubre",
-      img: "",
+      img: "/images/oktubre-cover.webp",
       year: "1986",
-      long: "41:08",
+      long: "41:08"
     },
+    {
+      title: "Un baión para el ojo idiota",
+      img: "/images/baion-cover.jpeg",
+      year: "1988",
+      long: "32:49"
+    },
+    {
+      title: "¡Bang! ¡Bang!... Estás liquidado",
+      img: "/images/bang-cover.jpeg",
+      year: "1989",
+      long: "32:49"
+    },
+    {
+      title: "La mosca y la sopa",
+      img: "/images/mosca-cover.jpeg",
+      year: "1991",
+      long: "38:48"
+    },
+    {
+      title: "Cordero atado",
+      img: "/images/cordero-cover.jpg",
+      year: "1993",
+      long: "40:45"
+    },
+    {
+      title: "Lobo suelto",
+      img: "/images/lobosuelto-cover.jpg",
+      year: "1993",
+      long: "40:44"
+    },
+    {
+      title: "Luzbelito",
+      img: "/images/luzbelito-cover.jpeg",
+      year: "1996",
+      long: "56:27"
+    },
+    {
+      title: "Ultimo bondi a Finisterre",
+      img: "/images/finisterre2-cover.jpeg",
+      year: "1998",
+      long: "44:23"
+    },
+    {
+      title: "Momo sampler",
+      img: "/images/momosampler-cover.png",
+      year: "2000",
+      long: "48:42"
+    }
   ];
 
   return (
@@ -25,10 +73,11 @@ export default function Home() {
       <HeaderSection cont1="Home" cont2="About me" cont3="Portfolio" />
 
       <h4 style={{marginTop:"10px"}}>*COVERS SECTION</h4>
-      <div style={{display:"flex", justifyContent:"center"}}>
-        <Album title="Gulp!" img="/images/gulp-cover.jpeg" year="1985" long="39:20" />
-        <Album title="Oktubre" img="/images/oktubre-cover.webp" year="1986" long="41:08" />
-        <Album title="¡Bang! ¡Bang!... Estas liquidado" img="/images/bang-cover.jpeg" year="1989" long="32:49" />
+      <div style={{display:"flex", flexWrap:"wrap", width:"1000px", justifyContent:"center"}}>
+
+        {albums.map((album, index) => (
+          <Album key={index} title={album.title} img={album.img} year={album.year} long={album.long}/>
+        ))}
       </div>
     </main>
   );
