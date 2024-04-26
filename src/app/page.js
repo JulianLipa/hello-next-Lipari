@@ -85,7 +85,7 @@ export default function Home() {
       <h4 style={{marginTop:"10px"}}>*HEADER SECTION</h4>
       <HeaderSection cont1="Home" cont2="About me" cont3="Portfolio" />
 
-      <h4 style={{marginTop:"10px"}}>*COVERS SECTION oaoaoao</h4>
+      <h4 style={{marginTop:"10px"}}>*COVERS SECTION</h4>
       <div style={{display:"flex", flexWrap:"wrap", width:"1000px", justifyContent:"center"}}>
 
         {albums.map((album, index) => (
