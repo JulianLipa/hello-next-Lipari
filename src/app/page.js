@@ -3,6 +3,8 @@ import styles from "./page.module.css";
 import HeaderSection from "./components/header";
 import Album from "./components/covers";
 
+
+
 export default function Home() {
   const albums = [
     {
@@ -67,12 +69,23 @@ export default function Home() {
     }
   ];
 
+  fetch('https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=The+Strokes&api_key=d659cc02b91f8569a8d3a3e95091db43&format=json')
+  .then(res => res.json())
+  .then(data => {
+    data = data.topalbums.album;
+    data.map((album, index) => {
+      if(index < 5){
+        console.log(data[index].name);
+      }
+    })
+  })
+
   return (
     <main className={styles.main}>
       <h4 style={{marginTop:"10px"}}>*HEADER SECTION</h4>
       <HeaderSection cont1="Home" cont2="About me" cont3="Portfolio" />
 
-      <h4 style={{marginTop:"10px"}}>*COVERS SECTION</h4>
+      <h4 style={{marginTop:"10px"}}>*COVERS SECTION oaoaoao</h4>
       <div style={{display:"flex", flexWrap:"wrap", width:"1000px", justifyContent:"center"}}>
 
         {albums.map((album, index) => (
