@@ -1,96 +1,58 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import HeaderSection from "./components/header";
 import Album from "./components/covers";
-
-
+import classNames from 'classnames';
+import FetchMusic from './fetch-music.js'
 
 export default function Home() {
-  const albums = [
-    {
-      title: "Gulp!",
-      img: "/images/gulp-cover.jpeg",
-      year: "1985",
-      long: "39:20"
-    },
-    {
-      title: "Oktubre",
-      img: "/images/oktubre-cover.webp",
-      year: "1986",
-      long: "41:08"
-    },
-    {
-      title: "Un baión para el ojo idiota",
-      img: "/images/baion-cover.jpeg",
-      year: "1988",
-      long: "32:49"
-    },
-    {
-      title: "¡Bang! ¡Bang!... Estás liquidado",
-      img: "/images/bang-cover.jpeg",
-      year: "1989",
-      long: "32:49"
-    },
-    {
-      title: "La mosca y la sopa",
-      img: "/images/mosca-cover.jpeg",
-      year: "1991",
-      long: "38:48"
-    },
-    {
-      title: "Cordero atado",
-      img: "/images/cordero-cover.jpg",
-      year: "1993",
-      long: "40:45"
-    },
-    {
-      title: "Lobo suelto",
-      img: "/images/lobosuelto-cover.jpg",
-      year: "1993",
-      long: "40:44"
-    },
-    {
-      title: "Luzbelito",
-      img: "/images/luzbelito-cover.jpeg",
-      year: "1996",
-      long: "56:27"
-    },
-    {
-      title: "Ultimo bondi a Finisterre",
-      img: "/images/finisterre2-cover.jpeg",
-      year: "1998",
-      long: "44:23"
-    },
-    {
-      title: "Momo sampler",
-      img: "/images/momosampler-cover.png",
-      year: "2000",
-      long: "48:42"
-    }
-  ];
+  let headerClasses = classNames('header', 'box');
+  const iconSize = 25;
 
-  fetch('https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=The+Strokes&api_key=d659cc02b91f8569a8d3a3e95091db43&format=json')
-  .then(res => res.json())
-  .then(data => {
-    data = data.topalbums.album;
-    data.map((album, index) => {
-      if(index < 5){
-        console.log(data[index].name);
-      }
-    })
-  })
+  const albums = FetchMusic();
+
 
   return (
-    <main className={styles.main}>
-      <h4 style={{marginTop:"10px"}}>*HEADER SECTION</h4>
-      <HeaderSection cont1="Home" cont2="About me" cont3="Portfolio" />
+    <main className={"main"}>
+      <div className={"fixed"}>
+        <div className={headerClasses}>
+          <div>
+            <Image src="/images/icons/home.svg" width={iconSize} height={iconSize} alt="home icon" className={'icon'}/>
+            <h3>Inicio</h3>
+          </div>
 
-      <h4 style={{marginTop:"10px"}}>*COVERS SECTION</h4>
-      <div style={{display:"flex", flexWrap:"wrap", width:"1000px", justifyContent:"center"}}>
+          <div>
+            <Image src="/images/icons/search.svg" width={iconSize} height={iconSize} alt="search icon" className={'icon'}/>
+            <h3>Buscar</h3>
+          </div>
+        </div>
 
-        {albums.map((album, index) => (
-          <Album key={index} title={album.title} img={album.img} year={album.year} long={album.long}/>
-        ))}
+        <div className={headerClasses}>
+          <div>
+            <Image src="/images/icons/library.svg" width={iconSize} height={iconSize} alt="search icon" className={'icon'}/>
+            <h3>Tu biblioteca</h3>
+          </div>
+          <div>
+            <Image src="/images/icons/search.svg" width={iconSize} height={iconSize} alt="search icon" className={'icon'}/>
+          </div>
+        </div>
+      </div>
+
+      <div className={'mainScreen'}>
+        <div className={'hero'}>
+          <div>
+            <div className={'one-liner'}>
+            <Image src="/images/icons/verified.svg" width={iconSize} height={iconSize} alt="verified icon" className={'icon'}/>
+            <p>Artista verificado</p>
+            </div>
+            <h2>Patricio Rey y sus Redonditos de Ricota</h2>
+            <p>2,042,541 oyentes mensuales</p>
+          </div>
+        </div>
+        <div className={'albums-section'}>
+          {albums.map((album, index) => (
+            <Album key={index} title={album.title} img={album.img} year={album.year} long={album.long}/>
+          ))}
+        </div>
       </div>
     </main>
   );
