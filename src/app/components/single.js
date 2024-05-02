@@ -23,3 +23,16 @@ const Single = (props) => {
 };
 
 export default Single;
+
+/*
+let data; 
+
+fetch('https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=The+Strokes&api_key=d659cc02b91f8569a8d3a3e95091db43&format=json')
+  .then(res => res.json())
+  .then(responseData => {
+    data = responseData.topalbums.album;
+    data = data[1].image[3]['#text'];
+
+    console.log(data); // Solo para demostración, puedes hacer lo que necesites con la variable data aquí
+  });
+*/

@@ -153,8 +153,6 @@ h2{
   display: flex;
   align-items: center;
   padding: 1%;
-
-  width: 100%;
 }
 
 .play-section img,.play-section h2{
@@ -196,7 +194,7 @@ h2{
   width: 100%;
   margin-bottom: 10px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 0 5px 0 !important;
 }
 .single-theme:hover{
   background-color: #a7a7a74c;
@@ -231,6 +229,11 @@ h2{
 .albums-section{
   display: flex;
   flex-wrap: wrap;
+}
+
+.albums-section h2{
+  font-weight: 400;
+  color: white;
 }
 
 .cards-single:hover{
