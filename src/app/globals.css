@@ -14,7 +14,7 @@ body{
   flex-wrap: wrap;
 }
 
-h3, p{
+h1, h1, h3, p{
   color: #A7A7A7;
 
   font-family: "Poppins", sans-serif;
@@ -37,6 +37,10 @@ h2{
   border-radius: 10px;
   margin-left: 20px;
   margin-top: 20px;
+}
+
+.header.box:nth-child(2){
+  height: 77vh;
 }
 
 .header.box div{
@@ -70,13 +74,16 @@ h2{
 
   width: 70vw;
   margin-top: 10px;
-  margin-left: 30vw;
+  margin-left: 31vw;
 }
 
 .albums-section{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .hero{
@@ -96,8 +103,8 @@ h2{
   padding: 20px;
 }
 
-.hero div h2{
-  font-size: 2em;
+.hero div h1{
+  font-size: 2.5em;
   color: white;
 }
 
@@ -112,8 +119,126 @@ h2{
   align-items: center;
 
   padding: 0 !important;
+  font-weight: 400;
 }
 
 .one-liner img{
   margin-right: 5px;
+}
+
+.one-liner p:nth-child(1)::after{
+  margin-right: 15px;
+  height: 5px;
+  width: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: flex;
+}
+
+.cards-single{
+  border-radius: 10px;
+  padding: 50px 40px;
+}
+
+.cards-single h2{
+  width: 200px;
+  font-weight: 400;
+}
+
+.cards-single p:nth-child(2){
+  margin-left: 10px;
+}
+
+.play-section{
+  display: flex;
+  align-items: center;
+  padding: 1%;
+
+  width: 100%;
+}
+
+.play-section img,.play-section h2{
+  margin-right: 25px;
+}
+
+.play-section h2{
+  font-weight: 300;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #A7A7A7;
+  border-radius: 30px;
+  color: white;
+}
+
+.play-section h2:hover{
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.popular-section{
+  width: 100%;
+}
+
+.popular-section h2:nth-child(1){
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 1.2em;
+
+  font-weight: 600;
+  color: white;
+}
+
+.popular-section h2, .popular-section p{
+  font-weight: 400;
+  color: #A7A7A7;
+}
+
+.single-theme{
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.single-theme:hover{
+  background-color: #a7a7a74c;
+  cursor: pointer;
+}
+
+.songs-section{
+  width: 100%;
+  background-color: #121212;
+  border-radius: 10px;
+}
+
+.popular-section{
+  width: 100%;
+}
+
+.single-theme p{
+  padding: 0 30px 0 30px;
+  font-weight: 200;
+}
+
+.single-theme p:nth-child(4){
+  padding: 0 250px 0 0 !important;
+}
+
+.single-theme h2{
+  width: 400px;
+  margin-left: 20px;
+  color: white;
+}
+
+.albums-section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-single:hover{
+  background-color: #a7a7a74c;
+  cursor: pointer;
+}
+
+.cards-single:hover > h2{
+  color: white;
+  text-decoration: underline;
 }
