@@ -17,6 +17,14 @@ const Album = (props) => {
                 <p className={'one-liner'}>{year}</p>
                 <p className={'one-liner'}>{long}</p>
             </div>
+                <Image
+                    src="/images/icons/play.svg"
+                    alt="cover image"
+                    width={200}
+                    height={200}
+                    style={{borderRadius:"10px"}}
+                    className="playButton"
+                />
         </div>
     );
 };
