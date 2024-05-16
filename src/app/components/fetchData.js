@@ -20,9 +20,8 @@ const FetchData = () => {
         handleFetchData();
     }, []);
 
-    return (
+    return(
         <div>
-            {/* Renderizado condicional para mostrar un mensaje de carga */}
             {data === null ? (
                 <p>Cargando...</p>
             ) : (

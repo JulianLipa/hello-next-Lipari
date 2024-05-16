@@ -24,7 +24,7 @@ export default function Home() {
   
   let popularAux = 1;
 
-  return (
+  return(
     <main className={"main"}>
       <div className={"fixed"}>
         <div className={headerClasses}>
@@ -148,22 +148,23 @@ export default function Home() {
               ))}
             </div>
           </div>
-          
-          <div className={"popular-section"}>
-            <h2>Discografía</h2>
-            <div className={"albums-section"}>
-              {musicData.map((album, index) => (
-                <Albums
-                  key={index}
-                  title={album.name}
-                  img={album.image[3]['#text']}
-                />
-              ))}
-            </div>
-          </div>
-
         </div>
       </div>
     </main>
   );
+
+  /*
+    <div className={"popular-section"}>
+      <h2>Discografía</h2>
+      <div className={"albums-section"}>
+        {musicData.map((album, index) => (
+          <Albums
+            key={index}
+            title={album.name}
+            img={album.image[3]['#text']}
+          />
+        ))}
+      </div>
+    </div>
+  */
 }
