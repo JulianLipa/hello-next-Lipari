@@ -9,8 +9,6 @@ import Single from "./components/single.js";
 import FetchSingles from "./components/popularSongs.js";
 import FetchData from "./components/fetchData.js";
 
-import React, { useEffect, useState } from "react";
-
 export default function Home() {
   let headerClasses = classNames("header", "box");
   let playClasses = classNames("buttonPlay", "icon");
@@ -18,11 +16,6 @@ export default function Home() {
 
   const albums = FetchMusic();
   const songs = FetchSingles();
-
-  let musicData = FetchData();
-  musicData = musicData.props.children;
-
-  console.log(musicData);
   
   let popularAux = 1;
 
@@ -150,23 +143,26 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          <FetchData/>
+
         </div>
       </div>
     </main>
   );
-
-  /*
-    <div className={"popular-section"}>
-      <h2>Discografía</h2>
-      <div className={"albums-section"}>
-        {musicData.map((album, index) => (
-          <Albums
-            key={index}
-            title={album.name}
-            img={album.image[3]['#text']}
-          />
-        ))}
-      </div>
-    </div>
-  */
 }
+
+/*
+<div className={"popular-section"}>
+  <h2>Discografía</h2>
+  <div className={"albums-section"}>
+    {musicData.map((album, index) => (
+      <Albums
+        key={index}
+        title={album.name}
+        img={album.image[3]['#text']}
+      />
+    ))}
+  </div>
+</div>
+*/
