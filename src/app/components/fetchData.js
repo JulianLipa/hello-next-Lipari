@@ -19,7 +19,6 @@ const FetchData = () => {
           const data = response.data.topalbums.album;
           setAlbums(data);
           setLoading(false);
-          console.log("data", data);
         } catch (error) {
           console.log("error", error);
         }
@@ -28,8 +27,8 @@ const FetchData = () => {
       handleFetchData();
     }, []);
   
-    return (
-      <div>
+    return(
+      <div className={"albums-section"}>
         {loading && <p>Fetching data</p>}
         {!loading &&
           albums.map((album, index) => (

@@ -19,6 +19,12 @@ export default function Home() {
   
   let popularAux = 1;
 
+  const buttons = document.querySelectorAll("playButton");
+
+  buttons.onclick = function(){
+    console.log(buttons.src)
+  }
+
   return(
     <main className={"main"}>
       <div className={"fixed"}>
@@ -143,6 +149,7 @@ export default function Home() {
               ))}
             </div>
           </div>
+
 
           <FetchData/>
 
