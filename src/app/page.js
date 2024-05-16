@@ -9,6 +9,8 @@ import Single from "./components/single.js";
 import FetchSingles from "./components/popularSongs.js";
 import FetchData from "./components/fetchData.js";
 
+import React, { useEffect, useState } from "react";
+
 export default function Home() {
   let headerClasses = classNames("header", "box");
   let playClasses = classNames("buttonPlay", "icon");
