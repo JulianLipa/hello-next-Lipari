@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-import Albums from "./covers";
+import Albums from "./Album";
 
-const FetchData = () => {
+const AlbumsGrid = () => {
     const [albums, setAlbums] = useState([]);
     const [loading, setLoading] = useState(true);
   
@@ -42,4 +42,4 @@ const FetchData = () => {
     );
   };
   
-  export default FetchData;
+  export default AlbumsGrid;

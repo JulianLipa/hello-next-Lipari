@@ -3,6 +3,10 @@ import Image from "next/image";
 const Album = (props) => {
     const {title, img, year, long} = props;
 
+    const handlePlay = () => {
+console.log(title)
+    }
+
     return(
         <div className={'cards-single'}>
             <Image
@@ -23,6 +27,7 @@ const Album = (props) => {
                     width={200}
                     height={200}
                     style={{borderRadius:"10px"}}
+                    onClick={handlePlay}
                     className="playButton"
                 />
         </div>

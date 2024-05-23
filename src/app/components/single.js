@@ -33,6 +33,6 @@ fetch('https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=The+
     data = responseData.topalbums.album;
     data = data[1].image[3]['#text'];
 
-    console.log(data); // Solo para demostración, puedes hacer lo que necesites con la variable data aquí
+    console.log(data);
   });
 */

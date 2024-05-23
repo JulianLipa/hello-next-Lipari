@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import styles from "./page-module.css";
-import Albums from "./components/covers";
+import Albums from "./components/Album";
 import classNames from "classnames";
 import FetchMusic from "./fetch-music.js";
 import Single from "./components/single.js";
 import FetchSingles from "./components/popularSongs.js";
-import FetchData from "./components/fetchData.js";
+import AlbumsGrid from "./components/AlbumsGrid.js";
 
 export default function Home() {
   let headerClasses = classNames("header", "box");
@@ -18,12 +18,6 @@ export default function Home() {
   const songs = FetchSingles();
   
   let popularAux = 1;
-
-  const buttons = document.querySelectorAll("playButton");
-
-  buttons.onclick = function(){
-    console.log(buttons.src)
-  }
 
   return(
     <main className={"main"}>
@@ -150,8 +144,7 @@ export default function Home() {
             </div>
           </div>
 
-
-          <FetchData/>
+          <AlbumsGrid/>
 
         </div>
       </div>
